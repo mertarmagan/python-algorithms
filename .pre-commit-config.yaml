@@ -1,0 +1,52 @@
+# Pre-commit hooks configuration
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+
+repos:
+  # General code quality and formatting
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-toml
+      - id: check-added-large-files
+      - id: check-merge-conflict
+      - id: debug-statements
+      - id: mixed-line-ending
+
+  # Ruff linter and formatter (replaces isort, pylint, and some other tools)
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.4
+    hooks:
+      # Run the linter
+      - id: ruff
+        name: ruff lint
+        args: [--fix]
+      # Run the formatter (can replace Black, but we'll keep Black for now)
+      - id: ruff-format
+        name: ruff format
+        args: [--check, --diff]
+
+  # Python code formatting with Black
+  - repo: https://github.com/psf/black
+    rev: 25.9.0
+    hooks:
+      - id: black
+        name: black
+        language: python
+        args: ["--check", "--diff"]
+
+  # Run tests with pytest
+  - repo: local
+    hooks:
+      - id: pytest
+        name: pytest
+        entry: pytest
+        language: python
+        pass_filenames: false
+        always_run: true
+        args: ["-v", "--tb=short"]
+        additional_dependencies:
+          - pytest
