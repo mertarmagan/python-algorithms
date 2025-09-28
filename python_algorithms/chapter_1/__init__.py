@@ -4,7 +4,7 @@ from .algorithms import (
     factorial,
     fibonacci,
     linear_search,
-    run_chapter_1,
+    run,
 )
 
 __all__ = [
@@ -13,5 +13,5 @@ __all__ = [
     "binary_search",
     "factorial",
     "fibonacci",
-    "run_chapter_1",
+    "run",
 ]

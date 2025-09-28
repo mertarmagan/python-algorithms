@@ -3,7 +3,7 @@ from .algorithms import (
     dijkstra_algorithm,
     graph_bfs,
     graph_dfs,
-    run_chapter_3,
+    run,
 )
 
 __all__ = [
@@ -11,5 +11,5 @@ __all__ = [
     "graph_bfs",
     "graph_dfs",
     "dijkstra_algorithm",
-    "run_chapter_3",
+    "run",
 ]

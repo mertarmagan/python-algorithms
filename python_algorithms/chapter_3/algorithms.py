@@ -170,7 +170,7 @@ def create_weighted_graph():
     }
 
 
-def run_chapter_3():
+def run():
     """Run all algorithms in Chapter 3 with example data."""
     print("=" * 50)
     print("CHAPTER 3: Trees and Graph Algorithms")
@@ -207,8 +207,3 @@ def run_chapter_3():
 
     distances = dijkstra_algorithm(weighted_graph, "A")
     print(f"   Shortest distances from A: {distances}")
-
-
-if __name__ == "__main__":
-    # This allows running this file directly for debugging
-    run_chapter_3()

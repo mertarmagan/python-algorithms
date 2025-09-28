@@ -54,7 +54,7 @@ def fibonacci(n):
     return fibonacci(n - 1) + fibonacci(n - 2)
 
 
-def run_chapter_1():
+def run():
     """Run all algorithms in Chapter 1 with example data."""
     logger.info("=" * 50)
     logger.info("CHAPTER 1: Basic Algorithms and Data Structures")
@@ -98,8 +98,3 @@ def run_chapter_1():
     n = 10
     fib_sequence = [fibonacci(i) for i in range(n)]
     logger.info(f"   First {n} Fibonacci numbers: {fib_sequence}")
-
-
-if __name__ == "__main__":
-    # This allows running this file directly for debugging
-    run_chapter_1()

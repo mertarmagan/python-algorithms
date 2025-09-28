@@ -22,24 +22,27 @@ def main():
     # Configure logging based on verbose flag
     configure_logging(verbose=getattr(args, "verbose", False))
 
-    # Chapter mapping
+    # Chapter modules mapping
     chapters = {
-        1: ("Basic Algorithms and Data Structures", chapter_1.run_chapter_1),
-        2: ("Advanced Sorting and Data Structures", chapter_2.run_chapter_2),
-        3: ("Trees and Graph Algorithms", chapter_3.run_chapter_3),
+        1: ("Basic Algorithms and Data Structures", chapter_1),
+        2: ("Advanced Sorting and Data Structures", chapter_2),
+        3: ("Trees and Graph Algorithms", chapter_3),
     }
 
     if args.all:
         # Run all chapters
         logger.info("Running all chapters...")
         for chapter_num in sorted(chapters.keys()):
-            chapters[chapter_num][1]()
+            chapter_name, chapter_module = chapters[chapter_num]
+            logger.info(f"Running Chapter {chapter_num}: {chapter_name}")
+            chapter_module.run()
             logger.info("=" * 60)
     elif args.chapter:
         # Run specific chapter
         if args.chapter in chapters:
-            logger.info(f"Running Chapter {args.chapter}: {chapters[args.chapter][0]}")
-            chapters[args.chapter][1]()
+            chapter_name, chapter_module = chapters[args.chapter]
+            logger.info(f"Running Chapter {args.chapter}: {chapter_name}")
+            chapter_module.run()
         else:
             logger.error(f"Chapter {args.chapter} not found!")
             return EXIT_FAILURE

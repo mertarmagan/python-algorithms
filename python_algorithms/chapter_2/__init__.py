@@ -5,7 +5,7 @@ from .algorithms import (
     merge_sort,
     queue_example,
     quick_sort,
-    run_chapter_2,
+    run,
     selection_sort,
     stack_example,
 )
@@ -19,5 +19,5 @@ __all__ = [
     "Queue",
     "stack_example",
     "queue_example",
-    "run_chapter_2",
+    "run",
 ]

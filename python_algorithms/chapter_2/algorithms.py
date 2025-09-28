@@ -170,7 +170,7 @@ def queue_example():
     return operations
 
 
-def run_chapter_2():
+def run():
     """Run all algorithms in Chapter 2 with example data."""
     print("=" * 60)
     print("CHAPTER 2: Advanced Sorting and Data Structures")
@@ -210,8 +210,3 @@ def run_chapter_2():
     queue_ops = queue_example()
     for op in queue_ops:
         print(f"   {op}")
-
-
-if __name__ == "__main__":
-    # This allows running this file directly for debugging
-    run_chapter_2()
