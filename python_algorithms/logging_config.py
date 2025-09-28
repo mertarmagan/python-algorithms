@@ -16,9 +16,14 @@ def configure_logging(verbose=False):
 
     if verbose:
         # More detailed format with date, time and level
+        format_string = (
+            "<green>{time:YYYY-MM-DD HH:mm:ss}</green> | "
+            "<level>{level: <8}</level> | "
+            "{message}"
+        )
         logger.add(
             sys.stderr,
-            format="<green>{time:YYYY-MM-DD HH:mm:ss}</green> | <level>{level: <8}</level> | {message}",
+            format=format_string,
             level="INFO",
             colorize=True,
         )

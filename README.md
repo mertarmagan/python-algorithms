@@ -6,7 +6,7 @@ A comprehensive collection of algorithm implementations organized by chapters fo
 
 ### Chapter 1: Basic Algorithms and Data Structures
 - **Sorting**: Bubble Sort
-- **Searching**: Linear Search, Binary Search  
+- **Searching**: Linear Search, Binary Search
 - **Recursion**: Factorial, Fibonacci
 - **Complexity**: Basic time and space analysis
 
@@ -45,7 +45,7 @@ poetry shell
 ```bash
 # Run a specific chapter
 python -m python_algorithms --chapter 1
-python -m python_algorithms --chapter 2  
+python -m python_algorithms --chapter 2
 python -m python_algorithms --chapter 3
 
 # Run all chapters
@@ -89,7 +89,7 @@ poetry run pytest
 
 The pre-commit hooks will automatically run on every commit and check:
 - **Code formatting** (Black)
-- **Linting** (Ruff) 
+- **Linting** (Ruff)
 - **Import sorting** (Ruff)
 - **Basic file checks** (trailing whitespace, etc.)
 - **All tests** (pytest)

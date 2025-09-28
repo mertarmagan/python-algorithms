@@ -1,4 +1,6 @@
 from .algorithms import (
+    Queue,
+    Stack,
     insertion_sort,
     merge_sort,
     queue_example,
@@ -13,6 +15,8 @@ __all__ = [
     "insertion_sort",
     "merge_sort",
     "quick_sort",
+    "Stack",
+    "Queue",
     "stack_example",
     "queue_example",
     "run_chapter_2",
